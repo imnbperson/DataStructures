@@ -45,7 +45,7 @@ _Bool deleteList(Node head, int index) {
 
 E * getList(Node head, int index) {
     if (index < 1) return NULL;
-    do {
+    do {                                        //不寻找前驱结点了
         head = head->next;
         if (head == NULL) return NULL;          //限制边界
     }while (--index);
